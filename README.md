@@ -60,5 +60,6 @@ const firebaseConfig = {
     appId: "YOUR_APP_ID"
 };
 
+```
 ## Contribution
 Contributions are welcome! If you have any ideas or improvements, please feel free to open an issue or submit a pull request.
