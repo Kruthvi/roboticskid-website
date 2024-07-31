@@ -1,0 +1,374 @@
+
+ * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+.navbar{
+    height: 130px;
+    background-color: #0f1111;
+    color:#fa6019;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-logo{
+    height: 100px;
+    width:100px;
+    background-size:cover;
+}
+
+.logo{
+    background-image:url("kidpy.png");
+    background-size:cover;
+    height: 100px;
+    width: 120%;
+}
+
+.border { 
+    padding: 10px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.border:hover {
+    background-color: lightgray; 
+}
+.nav-cart {
+    display: flex;
+    align-items: center; 
+}
+.nav-cart i {
+    margin-right: 5px; 
+}
+
+.add-first{
+    color:#cccccc;
+    font-size: 0.85rem;
+    margin-left: 15px;
+
+}
+
+.add-second{ 
+      align-items: center;
+      margin-left:3px;
+}
+
+.add-icon{
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-search{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: pink;
+    width: 620px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.nav-search:hover {
+    border:2px solid orange
+}
+
+.search-select{
+    background-color: #fa6019;
+    width:50px;
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border:none;
+
+}
+
+.search-input{
+    width:100%;
+    font-size: 1rem;
+    border:none;
+    color: #0f1111;
+}
+
+.search-icon{
+    width:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font: size 1rem;
+    background-color:#fa6019;
+    color: #0f1111;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius:4px ;
+}
+
+span{
+    font-size:0.7rem;
+}
+
+.nav-second{
+    font-size: 1.2rem;
+    font-weight:700;
+}
+
+.nav-cart i{
+    font-size: 30px;
+}
+
+.nav-cart {
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.panel{
+    height: 40px;
+    background-color: #fa6019;
+    display:flex;
+    color: black;
+    align-items: center;
+    justify-content:space-evenly;
+    font-weight: 800;
+
+}
+
+.panel-ops p {
+    display: inline;
+    margin-left: 10px;
+}
+
+.panel-ops{
+    width: 70%;
+    font-size: 1.0rem;
+    font-weight: 800;
+}
+
+.panel-deals {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+.hero-section {
+    background-image: url("kruthvik1.png");
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.hero-msg {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.hero-msg a {
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Shop Section */
+.shop-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color:black;
+    padding: 20px;
+}
+
+.box {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    padding: 20px;
+    background-color: #fa6019;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    background-color: white;
+}
+
+.box-img {
+    height: 150px;
+    background-size: contain;
+    margin: 0 auto 10px;
+}
+
+.box-content {
+    text-align: center;
+}
+
+.first1{
+    background-color: #fa6019;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #0f1111;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.foot-panel1{
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#myBtn{
+    background-color:#fa6019;
+    color: #fff;
+}
+#myBtn:hover{
+    background-color: black;
+}
+
+.foot-panel4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.foot-panel2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.foot-panel2 ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.foot-panel2 ul li {
+    margin-bottom: 10px;
+}
+
+.foot-panel2 h2 {
+    color: #fa6019;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.foot-panel2 a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.foot-panel2 a:hover {
+    color: #f57c4c;
+}
+
+.pages {
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.copyright {
+    font-size: 0.7rem;
+    text-align: center;
+    background-color: #fa6019;
+    padding: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        height: 60px;
+    }
+
+    .nav-logo {
+        height: 40px;
+        width: 40px;
+    }
+
+    .nav-search {
+        width: 250px;
+    }
+
+    .search-input {
+        font-size: 0.8rem;
+    }
+
+    .panel {
+        height: 50px;
+    }
+
+    .hero-section {
+        height: 300px;
+    }
+
+    .hero-msg {
+        font-size: 0.75rem;
+    }
+
+    .shop-section .box {
+        width: calc(50% - 20px);
+    }
+}
+.panel-ops p:hover {
+    
+    background-color: #ccc  20px; 
+    color: white; 
+}
+
+.disabled-link {
+    pointer-events: none; 
+    color: #888; 
+    text-decoration: none; 
+}
+
+.panel-ops {
+    cursor: pointer;
+}
+
+.panel-deals{
+    cursor:none;
+}
+
+.panel-deals {
+    background-color: #fa6019;
+    padding: 10px;
+    border-bottom: 1px solid #fa6019;
+    cursor: pointer;
+  }
+  
+  .dropdown-btn {
+    font-size: 15px;
+    margin-left: 8px;
+    cursor: pointer;
+  }
+  
+  .panel-ops {
+    display: none;
+    padding: 8 px;
+    background-color: #fa6019;
+    border-bottom: 1px solid #fa6019;
+  }
+  
+  .panel-ops p {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .dropdown-btn:hover{
+    color: white;
+  }

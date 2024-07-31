@@ -1,0 +1,382 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiddypy </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css"/>
+ </head>
+ <body>
+    <header>
+        <div class="navbar ">
+            <div class="nav-logo ">
+                <div class="logo"></div>
+            </div>
+         <div>
+            <h2 class="kiddypi-h2">KiddyPi</h2>
+         </div>
+
+         <div class="nav-search">
+            <select class="search-select" id="ageSelect">
+                <option value="all">All</option>
+                <option value="6-8">6-8 years</option>
+                <option value="9+">9+ years</option>
+                <option value="12+">12+ years</option>
+            </select>
+            <input placeholder="Search For Courses" class="search-input" id="courseSearch">
+            <div class="search-icon" id="searchIcon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        
+        <div id="courseList">
+            
+        </div>
+            <div class="nav-signin border" id="coursesButton">
+                <p class="nav-second">Courses</p>
+            </div>
+            
+            <div class="nav-return border" id="aboutUsButton">
+                <p class="nav-second">About Us</p>
+            </div>
+            
+            
+            <div class="nav-cart border" id="contactUsButton">
+                <i class="fa-regular fa-address-book"></i>
+                Contact Us
+            </div>
+            
+            
+        </div>
+
+        <div class="panel">
+            <div class="panel-deals">
+              <span class="dropdown-btn" onclick="toggleDropdown()">Course Categories<i class="fa-solid fa-angle-right"></i></span>
+            </div>
+            <div class="panel-ops" style="display: none;">
+              <p id="robotics" onclick="handleClick('Robotics')">Robotics</p>
+              <p id="electronics" onclick="handleClick('Electronics')">Electronics</p>
+              <p id="engineering" onclick="handleClick('Engineering')">Engineering</p>
+              <p id="animation" onclick="handleClick('Animation')">Animation</p>
+              <p id="programming" onclick="handleClick('Programming')">Programming</p>
+              <p id="game-design" onclick="handleClick('Game Design')">Game Design</p>
+            </div>
+          </div>
+    </header>
+    
+    <div class="hero-section">
+        <div class="hero-msg">
+            <a href="https://www.facebook.com/kiddypiclub">click here.in</a>
+            <p> New Batches every Monday from April 1st to May 27th, </p>
+        </div>
+    </div>
+    
+
+    <div class="shop-section ">
+        <div class="box1 box border">
+            <div class="box-content">
+                <h2>Scratch Programming for kids
+                    Level - 1</h2>
+              <div class="box-img" style="background-image: url('scratch-1.png');"></div>
+            <p>
+                Give a direction to your passion for animation and gaming. Learn coding from scratch. Make the sprites dance on your tune. Upload your program on the Scratch community and share your joy with programmers of your age.</p>
+               </div>
+        </div>
+
+        <div class="box2 box border">
+            <div class="box-content">
+                <h2>3D Design and Modelling Cours</h2>
+              <div class="box-img" style="background-image: url('scratch-2.png');"></div>
+            <p>Tickle your aptitude for engineering. Join the beginner's level of 3D Design & Modelling course. Create your own 3D models of a spanner or a pen's body and more with a user-friendly 3D modeling program called TinkerCad. Explore endless possibilities of 3D printing.</p>
+               </div>
+        </div>
+        <div class="box3 box border"> <div class="box-content">
+            <h2>Mobile Programming for Kids
+                Level - 2</h2>
+          <div class="box-img" style="background-image: url('scratch3.png');"></div>
+        <p>Create your own personalized music-player, steps-counter and shopping-list apps. Leverage accelerometer sensors of your mobile phones to calculate your steps in kilometers. Learn to build multiple in-app screens, add gif backgrounds. Program multiplayer games and language translator apps.
+
+        </p>
+           </div>
+        </div>
+        <div class="box4 box border">
+            <div class="box-content">
+                <h2>Microbit with MicroPython Programming for Kids Level - 1</h2>
+              <div class="box-img" style="background-image: url('kruthvik2.jpg');"></div>
+            <p>Learn to program in MicroPython with easy syntax and fun way to control MicroBit. Do projects and solve challenges in an online simulator. This is a perfect course to switch to text coding from block-based coding. Share your projects with members of the international Python community.
+
+            </p>
+               </div>
+        </div>
+        <div class="box1 box border">
+            <div class="box-content">
+                <h2>Python Game Development
+                    Level - 1</h2>
+              <div class="box-img" style="background-image: url('scratch-5.png');"></div>
+            <p>Engage in fun game-based Python coding. Begin with Pygame to code your first interactive video game with multiple interesting backdrops. Learn typed codes of Python, HTML, JavaScript with graphical programming games. Code your sprites, define players and navigate them as you wish.
+
+            </p>
+               </div>
+        </div>
+
+        <div class="box2 box border">
+            <div class="box-content">
+                <h2>Arduino Electronics</h2>
+              <div class="box-img" style="background-image: url('scratch-6.png');"></div>
+            <p>The Arduino Electronics course is perfect for students who are looking for theme based practical learning. Students will be able to do all the projects and concepts taught in the session practically with the help of the kit.They will learn the basics of Circuit connections and gain awareness of the different types of input and output devices.
+
+            </p>
+               </div>
+        </div>
+        <div class="box3 box border"> <div class="box-content">
+            <h2>Python Programming with Animation Level - 1</h2>
+          <div class="box-img" style="background-image: url('scratch-7.png')"></div>
+        <p>Grasp better concepts of coding with fun. Draw graphics. Learn how to build your own interactive animation games with Python. Mentors of KiddyPi, explain concepts in a simple fashion. Participate in lots of practice tasks to learn hands-on.</p>
+           </div>
+        </div>
+        <div class="box4 box border">
+            <div class="box-content">
+                <h2>Python with Machine Learning
+                    level - 1</h2>
+              <div class="box-img" style="background-image: url('scratch-8.png');"></div>
+            <p>Learn about AI/ML (Artificial Intelligence or Machine Learning) in a friendly guided environment. Train machine learning models to recognize images, sounds and classify numbers or texts. Create Python projects to achieve recognition and recommendation.
+
+            </p>
+               </div>
+        </div>
+    </div>
+
+    <div class="first1"><h1> News And Blogs</h1></div>
+    <div class="shop-section ">
+        <div class="box1 box border">
+            <div class="box-content">
+                <h2>Scratch Programming for kids
+                    Level - 1</h2>
+              <div class="box-img" style="background-image: url('news1.png');"></div>
+            <p>
+                Give a direction to your passion for animation and gaming. Learn coding from scratch. Make the sprites dance on your tune. Upload your program on the Scratch community and share your joy with programmers of your age.</p>
+               </div>
+        </div>
+
+        <div class="box2 box border">
+            <div class="box-content">
+                <h2>3D Design and Modelling Cours</h2>
+              <div class="box-img" style="background-image: url('news2.png');"></div>
+            <p>Tickle your aptitude for engineering. Join the beginner's level of 3D Design & Modelling course. Create your own 3D models of a spanner or a pen's body and more with a user-friendly 3D modeling program called TinkerCad. Explore endless possibilities of 3D printing.</p>
+               </div>
+        </div>
+        <div class="box3 box border"> <div class="box-content">
+            <h2>Mobile Programming for Kids
+                Level - 2</h2>
+          <div class="box-img" style="background-image: url('news3.png');"></div>
+        <p>Create your own personalized music-player, steps-counter and shopping-list apps. Leverage accelerometer sensors of your mobile phones to calculate your steps in kilometers. Learn to build multiple in-app screens, add gif backgrounds. Program multiplayer games and language translator apps.
+
+        </p>
+           </div>
+        </div>
+        </div>
+    
+
+        <footer>
+            <div class="foot-panel1">
+                <button onclick="topFunction()" id="myBtn" title="Go to top">Back To Top</button>
+            </div>
+    
+            <div class="foot-panel2">
+                <ul>
+                    <li><h2>Useful Links</h2></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#" id="coursesLink">Courses</a></li>
+                    <li><a href="#" id="aboutUsLink">About Us</a></li>
+                    
+                </ul>
+                <ul>
+                    <li><h2>Follow Us</h2></li>
+                    <li><a href="https://www.youtube.com/channel/UCi2vzd48Z--gef644dAWMDg"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://www.facebook.com/kiddypiclub"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://x.com/i/flow/login?redirect_after_login=%2Fkiddypi1"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/kiddypi/?originalSubdomain=in.com"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+                <ul>
+                    <li><h2>Contact Us</h2></li>
+                    <li><a href="#" class="disabled-link"><i class="fa-solid fa-location-arrow"></i>Ground Floor, MSR Complex, #50/7, 39th Cross, 16th Main, 4th T Block, Jayanagar, Bengaluru, Karnataka 560041.</a></li>
+                    <li><a href="#" class="disabled-link"><i class="fa-solid fa-at"></i>kiddypi@subhanu.com</a></li>
+                    <li><a href="#" class="disabled-link"><i class="fa-solid fa-phone"></i>+91 98453 49742</a></li>
+                    <li><a href="#" class="disabled-link"><i class="fa-solid fa-phone"></i>+91 73378 30111</a></li>
+                    <li><a href="#" class="disabled-link"><i class="fa-solid fa-phone"></i>+91 98451 75710</a></li>
+                </ul>
+                
+            </div>
+    
+            <div class="foot-panel4">
+                <div class="pages">
+                    <p>Copyright © 2024 KiddyPi | Powered by Subhanu Technologies & Solutions.</p>
+                </div>
+            </div>
+        </footer>
+    <script>
+       
+        let mybutton = document.getElementById("myBtn");
+        
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+
+        
+
+    
+    
+
+
+
+document.getElementById('searchIcon').addEventListener('click', function() {
+        alert('Search icon clicked!');
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    
+    const contactUsButton = document.getElementById('contactUsButton');
+
+    
+    contactUsButton.addEventListener('click', function() {
+        
+      window.location.href = "contactUs.html"
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const aboutUsButton = document.getElementById('aboutUsButton');
+
+    
+    aboutUsButton.addEventListener('click', function() {
+        
+        const middleOfPage = window.innerHeight / 0.35;
+        window.scrollTo({
+            top: middleOfPage,
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const aboutUsButton = document.getElementById('coursesButton');
+
+    
+    aboutUsButton.addEventListener('click', function() {
+        
+        const middleOfPage = window.innerHeight / 1;
+        window.scrollTo({
+            top: middleOfPage,
+            behavior: 'smooth'
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const aboutUsLink = document.getElementById('aboutUsLink');
+    const coursesLink = document.getElementById('coursesLink');
+
+    
+    aboutUsLink.addEventListener('click', function(event) {
+        event.preventDefault(); 
+        
+    });
+
+    
+    coursesLink.addEventListener('click', function(event) {
+        event.preventDefault(); 
+        
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const aboutUsButton = document.getElementById('aboutUsLink');
+    aboutUsButton.addEventListener('click', function() {
+        const middleOfPage = (document.documentElement.scrollHeight - window.innerHeight) / 1.3;
+        window.scrollTo({
+            top: middleOfPage,
+            behavior: 'smooth'
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const aboutUsButton = document.getElementById('coursesLink');
+    aboutUsButton.addEventListener('click', function() {
+        const middleOfPage = (document.documentElement.scrollHeight - window.innerHeight) / 3;
+        window.scrollTo({
+            top: middleOfPage,
+            behavior: 'smooth'
+        });
+    });
+});
+
+function toggleDropdown() {
+  var panelOps = document.querySelector('.panel-ops');
+  if (panelOps.style.display === 'none') {
+    panelOps.style.display = 'block';
+  } else {
+    panelOps.style.display = 'none';
+  }
+}
+function toggleDropdown() {
+  var panelOps = document.querySelector('.panel-ops');
+  var dropdownBtn = document.querySelector('.dropdown-btn');
+  if (panelOps.style.display === 'none') {
+    panelOps.style.display = 'block';
+    dropdownBtn.classList.add('active');
+  } else {
+    panelOps.style.display = 'none';
+    dropdownBtn.classList.remove('active');
+  }
+}
+
+function handleClick(category) {
+  switch (category) {
+    case 'Robotics':
+      window.location.href = 'robotics.html';
+      break;
+    case 'Electronics':
+      window.location.href = 'electronics.html';
+      break;
+    case 'Engineering':
+      window.location.href = 'engineering.html';
+      break;
+    case 'Animation':
+      window.location.href = 'animation.html';
+      break;
+    case 'Programming':
+      window.location.href = 'programming.html';
+      break;
+    case 'Game Design':
+      window.location.href = 'game-design.html';
+      break;
+    default:
+      console.log('Unknown category');
+  }
+}
+
+
+
+
+        </script>
+
+ </body>
+ </html>
